@@ -1,0 +1,39 @@
+<html><body>
+
+        <h1>Deputado: {{object_list.nome}}</h1>
+        <br><br>
+        Partido: {{object_list.partido}}<br>
+        Estado: {{object_list.estado}}<br>
+        Cargo: {{object_list.cargo}}<br><br>
+        <h3>Biografia</h3><br><br>
+        {% if object_list.biografia != "" %}
+            {{object_list.biografia}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <h3>Currículo</h3><br><br>
+        {% if object_list.curriculo != "" %}
+            {{object_list.curriculo}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <h3>Carreira</h3><br><br>
+        {% if object_list.carreira != "" %}
+            {{object_list.carreira}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <h3>Papel</h3><br><br>
+        {% if object_list.papel != "" %}
+            {{object_list.papel}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <hr>
+        <br><br>
+
+</body></html>

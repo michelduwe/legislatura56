@@ -1,0 +1,29 @@
+<html>
+
+<body>
+
+<strong>Pesquisar deputados</strong>
+<br><br>
+<form action="{% url 'resultados' %}" method="get">
+    <input name="query" type="text" placeholder="Nome do deputado ...">
+    <input type="submit" value="Pesquisar deputados" ></input>
+</form>
+<br>
+<strong>lista de deputados</strong>
+<br><br>
+<a href="{% url 'lista_deputados' %}">Lista de deputados</a>
+<br><br>
+<strong>Panorama político por estado</strong>
+<br><br>
+<form action="{% url 'lista_deputados' %}" method="get" name="form_estado">
+    <select name="q_estado">
+        {% for estado in object_list %}
+            <option value={{estado.estado}}>{{estado.estado}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Pesquisar panorama" ></input>
+</form>
+<br>
+</body>
+
+</html

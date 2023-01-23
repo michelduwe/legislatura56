@@ -1,0 +1,22 @@
+<html><body>
+    
+    <table border=2>
+        <tr>
+            <th>Nome</th>
+            <th>Partido</th>
+            <th>Estado</th>
+            <th>Cargo</th>
+            <th>Mais detalhes</th>
+        </tr>
+    {% for deputado in object_list %}
+        <tr>
+            <td>{{deputado.nome}}</td>
+            <td>{{deputado.partido}}</td>
+            <td>{{deputado.estado}}</td>
+            <td>{{deputado.cargo}}</td>
+            <td><a href="{% url 'deputado' %}?q_id={{deputado.id}}">Mais detalhes </td>
+
+        </tr>
+    {% endfor %}
+    </table>
+</body></html

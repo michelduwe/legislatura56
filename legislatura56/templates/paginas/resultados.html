@@ -1,0 +1,35 @@
+<html><body>
+    {% if object_list.count == 0 %}
+        Nenhum deputado localizado
+    {% endif %}
+    {% for deputado in object_list %}
+
+        <h1>Deputado: {{deputado.nome}}</h1>
+        <br><br>
+        <h3>Curriculo</h3><br><br>
+        {% if deputado.curriculo != "" %}
+            {{deputado.curriculo}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <h3>Carreira</h3><br><br>
+        {% if deputado.carreira != "" %}
+            {{deputado.carreira}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <h3>Papel</h3><br><br>
+        {% if deputado.papel != "" %}
+            {{deputado.papel}}
+        {% else %}
+            Nenhuma informação disponível
+        {% endif %}
+        <br><br>
+        <hr>
+        <br><br>
+
+    {% endfor %}
+
+</body></html>
